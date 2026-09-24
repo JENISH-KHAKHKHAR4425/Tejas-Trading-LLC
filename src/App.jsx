@@ -97,7 +97,9 @@ const CONTACT = {
   mobileHref: "tel:+971503746081",
   landline: "+971 4 580 9692",
   landlineHref: "tel:+97145809692",
-  email: "khakhkhartejas4@gmail.com",
+  email: "tejastrading31@gmail.com",
+  address:
+    "Souq Al Kabeer Bldng. 96, G. Floor, Shop-22, Opp. Veg. World, Behind TIA Sarees",
 };
 
 const CAPABILITIES = [
@@ -206,6 +208,10 @@ function Hero() {
           <div className="manifest-row">
             <dt>Categories</dt>
             <dd>10 product lines</dd>
+          </div>
+          <div className="manifest-row">
+            <dt>Address</dt>
+            <dd>{CONTACT.address}</dd>
           </div>
           <div className="manifest-row">
             <dt>Mobile</dt>
@@ -344,6 +350,20 @@ function Contact() {
         </div>
 
         <div className="contact-cards">
+          <a
+            className="contact-card"
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+              CONTACT.address
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+              <div className="contact-card-label">OFFICE ADDRESS</div>
+              <div className="contact-card-value">{CONTACT.address}</div>
+            </div>
+            <span className="contact-arrow">↗</span>
+          </a>
           <a className="contact-card" href={CONTACT.mobileHref}>
             <div>
               <div className="contact-card-label">MOBILE</div>
